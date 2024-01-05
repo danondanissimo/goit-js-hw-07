@@ -8,6 +8,7 @@ inputName.addEventListener("input", () => {
   } else {
     outputName.value = "Anonymous";
     console.log(outputName.innerHTML);
+    inputName.value = "";
   }
 });
 
