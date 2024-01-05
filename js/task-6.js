@@ -12,11 +12,10 @@ const number = document.querySelector('[type="number"]');
 
 const boxesContainer = document.querySelector("#boxes");
 
-const boxes = document.querySelectorAll(".random-box");
-
-buttonCreate.addEventListener("click", (event) => {
-  if (number.value <= 100) {
-    createElem(number.value);
+buttonCreate.addEventListener("click", () => {
+  if (number.value <= 100 && number.value > 0) {
+    boxesContainer.innerHTML = "";
+    createBoxes(number.value);
   }
   number.value = "";
 });
@@ -25,7 +24,7 @@ buttonDestroy.addEventListener("click", () => {
   boxesContainer.innerHTML = "";
 });
 
-function createElem(elemAmount) {
+function createBoxes(elemAmount) {
   for (let i = 0; i < elemAmount; i += 1) {
     const element = document.createElement("div");
 
