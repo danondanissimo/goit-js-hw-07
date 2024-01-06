@@ -7,7 +7,5 @@ inputName.addEventListener("input", () => {
     outputName.innerHTML = inputName.value.trim();
   } else {
     outputName.innerText = "Anonymous";
-
-    inputName.value = "";
   }
 });
